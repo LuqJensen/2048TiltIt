@@ -37,36 +37,6 @@ class Game {
         addTile()
         addTile()
         printState()
-        print("up")
-        moveUp()
-        addTile()
-        printState()
-        moveUp()
-        addTile()
-        printState()
-        moveUp()
-        addTile()
-        printState()
-        print("down")
-        moveDown()
-        addTile()
-        printState()
-        moveDown()
-        addTile()
-        printState()
-        moveLeft()
-        moveDown()
-        printState()
-        print("Left")
-        moveLeft()
-        addTile()
-        printState()
-        moveLeft()
-        addTile()
-        printState()
-        moveLeft()
-        addTile()
-        printState()
         
     }
     
@@ -86,7 +56,8 @@ class Game {
         print("")
     }
     
-    private func moveLeft() {
+    public func moveLeft() {
+        var didMove = false
         for y in 0..<size {
             var matchingValue = -1
             var matchingFieldXpos = -1
@@ -119,11 +90,13 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
                         matrix[y][firstEmptyTile] = value
                         matchingValue = value
-                        matchingFieldXpos = x
+                        matchingFieldXpos = firstEmptyTile
+                        didMove = true
                     } else {
                         matchingValue = value
                         matchingFieldXpos = x
@@ -131,9 +104,14 @@ class Game {
                 }
             }
         }
+        if didMove {
+            addTile()
+            printState()
+        }
     }
     
-    private func moveRight() {
+    public func moveRight() {
+        var didMove = false
         for y in 0..<size {
             var matchingValue = -1
             var matchingFieldXpos = -1
@@ -166,11 +144,13 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
                         matrix[y][firstEmptyTile] = value
                         matchingValue = value
-                        matchingFieldXpos = x
+                        matchingFieldXpos = firstEmptyTile
+                        didMove = true
                     } else {
                         matchingValue = value
                         matchingFieldXpos = x
@@ -178,9 +158,14 @@ class Game {
                 }
             }
         }
+        if didMove {
+            addTile()
+            printState()
+        }
     }
     
-    private func moveUp() {
+    public func moveUp() {
+        var didMove = false
         for x in 0..<size {
             var matchingValue = -1
             var matchingFieldXpos = -1
@@ -213,11 +198,13 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
                         matrix[firstEmptyTile][x] = value
                         matchingValue = value
-                        matchingFieldXpos = y
+                        matchingFieldXpos = firstEmptyTile
+                        didMove = true
                     } else {
                         matchingValue = value
                         matchingFieldXpos = y
@@ -225,9 +212,14 @@ class Game {
                 }
             }
         }
+        if didMove {
+            addTile()
+            printState()
+        }
     }
     
-    private func moveDown() {
+    public func moveDown() {
+        var didMove = false
         for x in 0..<size {
             var matchingValue = -1
             var matchingFieldXpos = -1
@@ -260,17 +252,23 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
                         matrix[firstEmptyTile][x] = value
                         matchingValue = value
-                        matchingFieldXpos = y
+                        matchingFieldXpos = firstEmptyTile
+                        didMove = true
                     } else {
                         matchingValue = value
                         matchingFieldXpos = y
                     }
                 }
             }
+        }
+        if didMove {
+            addTile()
+            printState()
         }
     }
 }

@@ -16,5 +16,15 @@ class GameViewController: UIViewController {
         
     }
 
+    @IBAction func move(_ sender: UIButton) {
+        let direction = sender.currentTitle
+        switch direction {
+        case "Left": game.moveLeft()
+        case "Right": game.moveRight()
+        case "Up": game.moveUp()
+        case "Down": game.moveDown()
+        default: game.moveLeft()
+        }
+    }
 }
 
