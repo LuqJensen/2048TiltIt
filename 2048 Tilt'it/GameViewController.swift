@@ -9,7 +9,12 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+    var game = Game()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 }
 

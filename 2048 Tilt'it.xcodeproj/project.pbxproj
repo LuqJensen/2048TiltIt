@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		77C7E124219B5D8900D2A565 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */; };
 		77C7E126219B640D00D2A565 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E125219B640D00D2A565 /* HighscoreViewController.swift */; };
+		77C7E128219B7C8C00D2A565 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E127219B7C8C00D2A565 /* Game.swift */; };
 		A07B31B5218AF10600D62866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B31B4218AF10600D62866 /* AppDelegate.swift */; };
 		A07B31B7218AF10600D62866 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B31B6218AF10600D62866 /* GameViewController.swift */; };
 		A07B31BA218AF10600D62866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07B31B8218AF10600D62866 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		77C7E125219B640D00D2A565 /* HighscoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
+		77C7E127219B7C8C00D2A565 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A07B31B1218AF10600D62866 /* 2048 Tilt'it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2048 Tilt'it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B31B4218AF10600D62866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07B31B6218AF10600D62866 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A07B31B8218AF10600D62866 /* Main.storyboard */,
 				77C7E125219B640D00D2A565 /* HighscoreViewController.swift */,
 				77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */,
+				77C7E127219B7C8C00D2A565 /* Game.swift */,
 				A07B31BB218AF10A00D62866 /* Assets.xcassets */,
 				A07B31BD218AF10A00D62866 /* LaunchScreen.storyboard */,
 				A07B31C0218AF10A00D62866 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C7E124219B5D8900D2A565 /* MainMenuViewController.swift in Sources */,
+				77C7E128219B7C8C00D2A565 /* Game.swift in Sources */,
 				A07B31B7218AF10600D62866 /* GameViewController.swift in Sources */,
 				A07B31B5218AF10600D62866 /* AppDelegate.swift in Sources */,
 				77C7E126219B640D00D2A565 /* HighscoreViewController.swift in Sources */,
