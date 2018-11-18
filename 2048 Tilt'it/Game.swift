@@ -12,6 +12,7 @@ class Game {
     
     var matrix: [[Int]] = []
     var size = 4
+    var score = 0
     
     private func getEmptyPoints() -> [Point] {
         var emptyPoints : [Point] = []
@@ -49,11 +50,12 @@ class Game {
     private func printState() {
         for y in 0..<size {
             for x in 0..<size {
-                print(matrix[y][x], terminator: "")
+                print("\(matrix[y][x])  ", terminator: "")
             }
             print("")
         }
         print("")
+        print("Score: \(score)")
     }
     
     public func moveLeft() {
@@ -90,6 +92,7 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        score += value*2
                         didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
@@ -144,6 +147,7 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        score += value*2
                         didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
@@ -198,6 +202,7 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        score += value*2
                         didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
@@ -252,6 +257,7 @@ class Game {
                         }
                         matchingValue = -1
                         matchingFieldXpos = -1
+                        score += value*2
                         didMove = true
                     } else if beforeX {
                         matrix[y][x] = 0
