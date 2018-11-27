@@ -10,7 +10,7 @@ import Foundation
 
 class Game {
     
-    var matrix: [[Int]] = []
+    var matrix: [[Int]]
     var size = 4
     var score = 0
     
@@ -27,6 +27,7 @@ class Game {
     }
     
     init() {
+        matrix = []
         for _ in 0..<size {
             var row: [Int] = []
             for _ in 0..<size {

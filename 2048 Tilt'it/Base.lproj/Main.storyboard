@@ -80,42 +80,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-wP-97G">
-                                <rect key="frame" x="168" y="354" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Down"/>
-                                <connections>
-                                    <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="XlM-LD-7n0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L5-JO-17q">
-                                <rect key="frame" x="214" y="318" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Right"/>
-                                <connections>
-                                    <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="GKX-6N-IHj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-3h-joN">
-                                <rect key="frame" x="118" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Left"/>
-                                <connections>
-                                    <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="pgP-Ma-aLZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-EM-b5y">
-                                <rect key="frame" x="172" y="294" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Up"/>
-                                <connections>
-                                    <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="oL3-st-7VW"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EA-qr-GzI" customClass="GameView" customModule="_048_Tilt_it" customModuleProvider="target">
+                                <rect key="frame" x="16" y="71" width="343" height="348"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AvU-n6-ybg">
+                                <rect key="frame" x="103" y="552" width="169" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-3h-joN">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Left"/>
+                                        <connections>
+                                            <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="pgP-Ma-aLZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-wP-97G">
+                                        <rect key="frame" x="30" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Down"/>
+                                        <connections>
+                                            <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="XlM-LD-7n0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-EM-b5y">
+                                        <rect key="frame" x="69" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Up"/>
+                                        <connections>
+                                            <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="oL3-st-7VW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L5-JO-17q">
+                                        <rect key="frame" x="99" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="Right"/>
+                                        <connections>
+                                            <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="GKX-6N-IHj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-m2-2OF">
+                                        <rect key="frame" x="135" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="move:" destination="Mmw-8U-cBb" eventType="touchUpInside" id="5YU-gi-jZc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-Jd-PJd">
+                                <rect key="frame" x="16" y="473" width="53.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1EA-qr-GzI" firstAttribute="top" secondItem="jJ3-uy-YDU" secondAttribute="top" constant="7" id="7IR-8C-quz"/>
+                            <constraint firstItem="jJ3-uy-YDU" firstAttribute="trailing" secondItem="1EA-qr-GzI" secondAttribute="trailing" constant="16" id="StD-aM-M57"/>
+                            <constraint firstItem="AvU-n6-ybg" firstAttribute="top" secondItem="1EA-qr-GzI" secondAttribute="bottom" constant="133" id="bOk-ci-3bD"/>
+                            <constraint firstItem="9GH-Jd-PJd" firstAttribute="top" secondItem="1EA-qr-GzI" secondAttribute="bottom" constant="54" id="eVc-MT-O2v"/>
+                            <constraint firstItem="1EA-qr-GzI" firstAttribute="leading" secondItem="jJ3-uy-YDU" secondAttribute="leading" constant="16" id="ecY-nh-KZZ"/>
+                            <constraint firstItem="9GH-Jd-PJd" firstAttribute="leading" secondItem="jJ3-uy-YDU" secondAttribute="leading" constant="16" id="qzw-zw-Tyu"/>
+                            <constraint firstItem="AvU-n6-ybg" firstAttribute="centerX" secondItem="jJ3-uy-YDU" secondAttribute="centerX" id="vBV-I4-Qud"/>
+                            <constraint firstItem="jJ3-uy-YDU" firstAttribute="bottom" secondItem="AvU-n6-ybg" secondAttribute="bottom" constant="85" id="yPI-Od-4v4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jJ3-uy-YDU"/>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="1EA-qr-GzI" id="UfG-Yk-LwF"/>
+                        <outlet property="scoreLabel" destination="9GH-Jd-PJd" id="wiD-41-R5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc6-Nt-EB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
