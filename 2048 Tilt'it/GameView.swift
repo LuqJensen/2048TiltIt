@@ -47,20 +47,25 @@ class GameView: UIView {
         return tile
     }
     
+    private func configureTile(tile: TileView, tilesPerRow: Int) {
+        let sizePerTileTotal = bounds.maxX / CGFloat(tilesPerRow)
+        let padding = sizePerTileTotal / 10
+        let sizePerTile = sizePerTileTotal - padding * 2
+        
+        let labelRect = CGRect(x: 0, y: 0, width: sizePerTile, height: sizePerTile)
+        tile.frame = labelRect
+        tile.label.frame = labelRect
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("Bounds - x: \(bounds.maxX)")
         let sizePerTileTotal = bounds.maxX / CGFloat(tiles.count)
         let padding = sizePerTileTotal / 10
         let sizePerTile = sizePerTileTotal - padding * 2
         
-        print("sizePerTileTotal: \(sizePerTileTotal)")
-        print("padding: \(padding)")
-        print("sizePerTile: \(sizePerTile)")
-        
         for y in 0..<tiles.count {
             for x in 0..<tiles.count {
-                print("Tile x: \(padding+CGFloat(x)*sizePerTile+padding*CGFloat(x)*2)")
+                configureTile(tile: tiles[y][x], tilesPerRow: tiles.count)
                 tiles[y][x].frame.origin = bounds.origin.offsetBy(dx: padding+CGFloat(x)*sizePerTile+padding*CGFloat(x)*2, dy: padding+CGFloat(y)*sizePerTile+padding*CGFloat(y)*2)
             }
         }

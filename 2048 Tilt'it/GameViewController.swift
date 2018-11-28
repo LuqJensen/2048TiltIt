@@ -15,14 +15,11 @@ class GameViewController: UIViewController {
     
     var game = Game()
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func viewDidLoad() {
+        gameView.generateTiles(game.matrix)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        gameView.generateTiles(game.matrix)
-        gameView.setNeedsDisplay()
-        gameView.setNeedsLayout()
-        
         motionManager.deviceMotionUpdateInterval = 0.2
         
         var lastMotion = ""

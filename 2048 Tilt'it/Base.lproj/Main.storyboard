@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
-                                            <segue destination="Mmw-8U-cBb" kind="show" identifier="Continue" id="Sps-DD-6hn"/>
+                                            <action selector="Continue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHK-G1-D85"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-5C-C66">
@@ -174,7 +174,4 @@
             <point key="canvasLocation" x="1661" y="122"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Sps-DD-6hn"/>
-    </inferredMetricsTieBreakers>
 </document>
