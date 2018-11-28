@@ -57,21 +57,21 @@ class TileView: UIView {
         roundedRect.addClip()
         switch value {
         case 0:
-            UIColor.darkGray.setFill()
+            UIColor.init(red: 128/255, green: 128/255, blue: 128/255, alpha: 1).setFill()
         case 2:
-            UIColor.lightGray.setFill()
+            UIColor.init(red: 192/255, green: 192/255, blue: 192/255, alpha: 1).setFill()
         case 4:
-            UIColor.cyan.setFill()
+            UIColor.init(red: 0/255, green: 204/255, blue: 0/255, alpha: 1).setFill()
         case 8:
-            UIColor.green.setFill()
+            UIColor.init(red: 255/255, green: 178/255, blue: 102/255, alpha: 1).setFill()
         case 16:
-            UIColor.magenta.setFill()
+            UIColor.init(red: 255/255, green: 128/255, blue: 0/255, alpha: 1).setFill()
         case 32:
-            UIColor.orange.setFill()
+            UIColor.init(red: 255/255, green: 102/255, blue: 102/255, alpha: 1).setFill()
         case 64:
-            UIColor.red.setFill()
+            UIColor.init(red: 255/255, green: 0/255, blue: 0/255, alpha: 1).setFill()
         case 128...2048:
-            UIColor.yellow.setFill()
+            UIColor.init(red: 204/255, green: 204/255, blue: 0/255, alpha: 1).setFill()
         default:
             UIColor.black.setFill()
         }

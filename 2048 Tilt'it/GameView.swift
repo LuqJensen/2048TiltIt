@@ -30,14 +30,18 @@ class GameView: UIView {
         for _ in 0..<matrix.count {
             var row: [TileView] = []
             for _ in 0..<matrix.count {
-                row.append(createTile())
+                row.append(createTile(tilesPerRow: matrix.count))
             }
             tiles.append(row)
         }
     }
         
-    private func createTile() -> TileView {
-        let labelRect = CGRect(x: 0, y: 0, width: 75, height: 75)
+    private func createTile(tilesPerRow: Int) -> TileView {
+        let sizePerTileTotal = bounds.maxX / CGFloat(tilesPerRow)
+        let padding = sizePerTileTotal / 10
+        let sizePerTile = sizePerTileTotal - padding * 2
+        
+        let labelRect = CGRect(x: 0, y: 0, width: sizePerTile, height: sizePerTile)
         let tile = TileView(frame: labelRect)
         addSubview(tile)
         return tile
@@ -45,9 +49,19 @@ class GameView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        print("Bounds - x: \(bounds.maxX)")
+        let sizePerTileTotal = bounds.maxX / CGFloat(tiles.count)
+        let padding = sizePerTileTotal / 10
+        let sizePerTile = sizePerTileTotal - padding * 2
+        
+        print("sizePerTileTotal: \(sizePerTileTotal)")
+        print("padding: \(padding)")
+        print("sizePerTile: \(sizePerTile)")
+        
         for y in 0..<tiles.count {
             for x in 0..<tiles.count {
-                tiles[y][x].frame.origin = bounds.origin.offsetBy(dx: CGFloat(x*75+x*25), dy: CGFloat(y*75+y*25))
+                print("Tile x: \(padding+CGFloat(x)*sizePerTile+padding*CGFloat(x)*2)")
+                tiles[y][x].frame.origin = bounds.origin.offsetBy(dx: padding+CGFloat(x)*sizePerTile+padding*CGFloat(x)*2, dy: padding+CGFloat(y)*sizePerTile+padding*CGFloat(y)*2)
             }
         }
     }
@@ -56,7 +70,7 @@ class GameView: UIView {
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: 16.0)
         
         roundedRect.addClip()
-        UIColor.brown.setFill()
+        UIColor.init(red: 51/255, green: 51/255, blue: 0, alpha: 1).setFill()
         roundedRect.fill()
     }
 }

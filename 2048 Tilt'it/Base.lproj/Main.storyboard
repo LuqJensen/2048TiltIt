@@ -41,12 +41,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmM-fq-6iF">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                         <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <segue destination="Mmw-8U-cBb" kind="show" identifier="Continue" id="Sps-DD-6hn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-5C-C66">
                                         <rect key="frame" x="0.0" y="38" width="75" height="30"/>
                                         <state key="normal" title="New Game"/>
                                         <connections>
-                                            <segue destination="Mmw-8U-cBb" kind="show" id="dQI-NT-neY"/>
+                                            <segue destination="Mmw-8U-cBb" kind="show" identifier="New Game" id="dQI-NT-neY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9f-bH-Mpl">
@@ -81,10 +84,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EA-qr-GzI" customClass="GameView" customModule="_048_Tilt_it" customModuleProvider="target">
-                                <rect key="frame" x="16" y="71" width="343" height="348"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="71" width="343" height="343"/>
+                                <color key="backgroundColor" red="0.93495482206344604" green="0.85222518444061279" blue="0.68585473299026489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1EA-qr-GzI" secondAttribute="height" multiplier="1:1" id="zvX-YP-9eA"/>
+                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AvU-n6-ybg">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AvU-n6-ybg">
                                 <rect key="frame" x="103" y="552" width="169" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-3h-joN">
@@ -131,12 +137,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93495482206344604" green="0.85222518444061279" blue="0.68585473299026489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1EA-qr-GzI" firstAttribute="top" secondItem="jJ3-uy-YDU" secondAttribute="top" constant="7" id="7IR-8C-quz"/>
+                            <constraint firstItem="9GH-Jd-PJd" firstAttribute="top" secondItem="1EA-qr-GzI" secondAttribute="bottom" constant="59" id="KNi-i9-K8d"/>
                             <constraint firstItem="jJ3-uy-YDU" firstAttribute="trailing" secondItem="1EA-qr-GzI" secondAttribute="trailing" constant="16" id="StD-aM-M57"/>
-                            <constraint firstItem="AvU-n6-ybg" firstAttribute="top" secondItem="1EA-qr-GzI" secondAttribute="bottom" constant="133" id="bOk-ci-3bD"/>
-                            <constraint firstItem="9GH-Jd-PJd" firstAttribute="top" secondItem="1EA-qr-GzI" secondAttribute="bottom" constant="54" id="eVc-MT-O2v"/>
                             <constraint firstItem="1EA-qr-GzI" firstAttribute="leading" secondItem="jJ3-uy-YDU" secondAttribute="leading" constant="16" id="ecY-nh-KZZ"/>
                             <constraint firstItem="9GH-Jd-PJd" firstAttribute="leading" secondItem="jJ3-uy-YDU" secondAttribute="leading" constant="16" id="qzw-zw-Tyu"/>
                             <constraint firstItem="AvU-n6-ybg" firstAttribute="centerX" secondItem="jJ3-uy-YDU" secondAttribute="centerX" id="vBV-I4-Qud"/>
@@ -169,4 +174,7 @@
             <point key="canvasLocation" x="1661" y="122"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sps-DD-6hn"/>
+    </inferredMetricsTieBreakers>
 </document>
