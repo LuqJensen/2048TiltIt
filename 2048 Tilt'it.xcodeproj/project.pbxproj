@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772B743E21AF4DBF00E5D01E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772B743C21AF4DBF00E5D01E /* DataModel.xcdatamodeld */; };
+		772B744221AFFE2C00E5D01E /* HighscoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B744121AFFE2C00E5D01E /* HighscoreTableViewController.swift */; };
 		77C7E124219B5D8900D2A565 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */; };
-		77C7E126219B640D00D2A565 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E125219B640D00D2A565 /* HighscoreViewController.swift */; };
 		77C7E128219B7C8C00D2A565 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7E127219B7C8C00D2A565 /* Game.swift */; };
 		77F593D521AB0C0000959C1A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F593D421AB0C0000959C1A /* GameView.swift */; };
 		77F593D721AB0FA500959C1A /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F593D621AB0FA500959C1A /* TileView.swift */; };
@@ -20,8 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		772B743D21AF4DBF00E5D01E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		772B744121AFFE2C00E5D01E /* HighscoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewController.swift; sourceTree = "<group>"; };
 		77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		77C7E125219B640D00D2A565 /* HighscoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
 		77C7E127219B7C8C00D2A565 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		77F593D421AB0C0000959C1A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		77F593D621AB0FA500959C1A /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
@@ -65,11 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				77F593D421AB0C0000959C1A /* GameView.swift */,
+				772B743C21AF4DBF00E5D01E /* DataModel.xcdatamodeld */,
 				A07B31B4218AF10600D62866 /* AppDelegate.swift */,
 				A07B31B6218AF10600D62866 /* GameViewController.swift */,
+				772B744121AFFE2C00E5D01E /* HighscoreTableViewController.swift */,
 				77F593D621AB0FA500959C1A /* TileView.swift */,
 				A07B31B8218AF10600D62866 /* Main.storyboard */,
-				77C7E125219B640D00D2A565 /* HighscoreViewController.swift */,
 				77C7E123219B5D8900D2A565 /* MainMenuViewController.swift */,
 				77C7E127219B7C8C00D2A565 /* Game.swift */,
 				A07B31BB218AF10A00D62866 /* Assets.xcassets */,
@@ -155,8 +158,9 @@
 				77C7E128219B7C8C00D2A565 /* Game.swift in Sources */,
 				A07B31B7218AF10600D62866 /* GameViewController.swift in Sources */,
 				A07B31B5218AF10600D62866 /* AppDelegate.swift in Sources */,
+				772B743E21AF4DBF00E5D01E /* DataModel.xcdatamodeld in Sources */,
 				77F593D521AB0C0000959C1A /* GameView.swift in Sources */,
-				77C7E126219B640D00D2A565 /* HighscoreViewController.swift in Sources */,
+				772B744221AFFE2C00E5D01E /* HighscoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,13 +305,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV563TR3X2;
+				DEVELOPMENT_TEAM = 5XNZC5B47J;
 				INFOPLIST_FILE = "2048 Tilt'it/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sdu.ios.-048-Tilt-it";
+				PRODUCT_BUNDLE_IDENTIFIER = sdu.ios.TiltIt2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,13 +324,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV563TR3X2;
+				DEVELOPMENT_TEAM = 5XNZC5B47J;
 				INFOPLIST_FILE = "2048 Tilt'it/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sdu.ios.-048-Tilt-it";
+				PRODUCT_BUNDLE_IDENTIFIER = sdu.ios.TiltIt2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		772B743C21AF4DBF00E5D01E /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				772B743D21AF4DBF00E5D01E /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 772B743D21AF4DBF00E5D01E /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A07B31A9218AF10600D62866 /* Project object */;
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreMotion
+import CoreData
 
 class GameViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class GameViewController: UIViewController {
     var game = Game()
     
     override func viewDidLoad() {
+        UIApplication.shared.isIdleTimerDisabled = true
         gameView.generateTiles(game.matrix)
     }
     
@@ -62,10 +64,19 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    @IBAction func move(_ sender: UIButton) {
-        let direction = sender.currentTitle
-        switch direction {
-        default: print()
+    override func viewWillDisappear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Score", in: context)
+        let newScore = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newScore.setValue(Date(), forKey: "date")
+        newScore.setValue(game.score, forKey: "score")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Something went wrong saving")
         }
     }
 }
