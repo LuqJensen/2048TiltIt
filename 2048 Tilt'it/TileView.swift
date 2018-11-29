@@ -54,7 +54,6 @@ class TileView: UIView {
 
     override func draw(_ rect: CGRect) {
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: 8.0)
-        roundedRect.addClip()
         switch value {
         case 0:
             UIColor.init(red: 128/255, green: 128/255, blue: 128/255, alpha: 1).setFill()

@@ -37,12 +37,8 @@ class GameView: UIView {
     }
         
     private func createTile(tilesPerRow: Int) -> TileView {
-        let sizePerTileTotal = bounds.maxX / CGFloat(tilesPerRow)
-        let padding = sizePerTileTotal / 10
-        let sizePerTile = sizePerTileTotal - padding * 2
-        
-        let labelRect = CGRect(x: 0, y: 0, width: sizePerTile, height: sizePerTile)
-        let tile = TileView(frame: labelRect)
+        let rect = CGRect(x: 0, y: 0, width: 0, height: 0)
+        let tile = TileView(frame: rect)
         addSubview(tile)
         return tile
     }
@@ -52,9 +48,9 @@ class GameView: UIView {
         let padding = sizePerTileTotal / 10
         let sizePerTile = sizePerTileTotal - padding * 2
         
-        let labelRect = CGRect(x: 0, y: 0, width: sizePerTile, height: sizePerTile)
-        tile.frame = labelRect
-        tile.label.frame = labelRect
+        let rect = CGRect(x: 0, y: 0, width: sizePerTile, height: sizePerTile)
+        tile.frame = rect
+        tile.label.frame = rect
     }
     
     override func layoutSubviews() {
@@ -73,8 +69,6 @@ class GameView: UIView {
 
     override func draw(_ rect: CGRect) {
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: 16.0)
-        
-        roundedRect.addClip()
         UIColor.init(red: 51/255, green: 51/255, blue: 0, alpha: 1).setFill()
         roundedRect.fill()
     }
